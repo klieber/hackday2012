@@ -3,15 +3,34 @@
 <html>
 <head>
 	<title>Home</title>
-	<script src="/resources/js/jquery.js"></script>
-	 <link href="/resources/css/bootstrap.css" rel="stylesheet">
+	<script src="resources/js/jquery.js"></script>
+	 <link href="resources/css/bootstrap.css" rel="stylesheet">
+	 <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+<div class="container">
 
-<P>  The time on the server is ${serverTime}. </P>
+	<div class="visible-phone navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quick Quote Fast Estimate</a>
+        </div>
+      </div>
+    </div>
+
+	<div class="hero-unit hidden-phone">
+		<h1>Quick Quote Fast Estimate</h1>
+		<p>Enter an address to receive an estimate for homeowners insurance</p>
+	</div>
+
+<form class="well form-inline">
+  <input type="text" class="span4" placeholder="Street">
+  <input type="text" class="span4" placeholder="City">
+  <input type="text" class="span1" placeholder="St">
+  <input type="text" class="span2" placeholder="Zip">
+  <button type="submit" class="btn">Submit</button>
+</form>
+</div>
 <!-- Placed at the end of the document so the pages load faster -->
     <script src="/resources/js/bootstrap-transition.js"></script>
     <script src="/resources/js/bootstrap-alert.js"></script>
