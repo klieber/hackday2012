@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>sf.hackday.roo.sample</groupId>
-    <artifactId>sf.hackday.roo.sample</artifactId>
+    <artifactId>sample-roo-addon</artifactId>
     <packaging>bundle</packaging>
     <version>0.1.0.BUILD-SNAPSHOT</version>
-    <name>sf-hackday-roo-sample</name>
+    <name>sample-roo-addon</name>
     <organization>
         <name>Your project/company name goes here (used in copyright and vendor information in the manifest)</name>
     </organization>

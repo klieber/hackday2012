@@ -61,63 +61,13 @@ public class SampleCommands implements CommandMarker { // All command types must
         staticFieldConverter.remove(SamplePropertyName.class);
     }
     
-    // *************************************************************************
-    //    Example 1 Printing colored messages to the shell
-    // *************************************************************************
-    
-    /**
-     * This method is optional. It allows automatic command hiding in situations when the command should not be visible.
-     * For example the 'entity' command will not be made available before the user has defined his persistence settings 
-     * in the Roo shell or directly in the project.
-     * 
-     * You can define multiple methods annotated with {@link CliAvailabilityIndicator} if your commands have differing
-     * visibility requirements.
-     * 
-     * @return true (default) if the command should be visible at this stage, false otherwise
-     */
-    @CliAvailabilityIndicator("say hello")
-    public boolean isSayHelloAvailable() {
-        return true; // This command is always available!
+    @CliAvailabilityIndicator("web mvc tiles")
+    public boolean isAddTilesAvailable() {
+    	return this.operations.isAddTilesCommandAvailable();
     }
     
-    /**
-     * This method registers a command with the Roo shell. It also offers two command attributes, a mandatory one and an
-     * optional command which has a default value.
-     * 
-     * @param name 
-     * @param country
-     */
-    @CliCommand(value = "say hello", help = "Prints welcome message to the Roo shell")
-    public void sayHello(
-        @CliOption(key = "name", mandatory = true, help = "State your name") String name, // A mandatory command attribute
-        @CliOption(key = "countryOfOrigin", mandatory = false, help = "Country of orgin") SamplePropertyName country) {
-        
-        log.info("Welcome " + name + "!");
-        log.warning("Country of origin: " + (country == null ? SamplePropertyName.NOT_SPECIFIED.getPropertyName() : country.getPropertyName()));
-        log.severe("It seems you are a running JDK " + operations.getProperty("java.version"));
-        log.info("You can use the default JDK logger anywhere in your add-on to send messages to the Roo shell");
-    }
-    
-    // *************************************************************************
-    //    Example 2 Installing and replacing tagx files in the target project
-    // *************************************************************************
-    
-    /**
-     * Define when "web mvc install tags" command should be visible in the Roo shell. 
-     * In this case we want to hide the command until the WEB-INF/tags folder is present.
-     * 
-     * @return true (default) if the command should be visible at this stage, false otherwise
-     */
-    @CliAvailabilityIndicator("web mvc install tags") // Define the exact command name
-    public boolean isInstallTagsCommandAvailable() {
-        return operations.isInstallTagsCommandAvailable();
-    }
-    
-    /**
-     * Replace existing MVC tagx files in the target project
-     */
-    @CliCommand(value = "web mvc install tags", help="Replace default Roo MVC tags used for scaffolding")
-    public void installTags() {
-        operations.installTags();
+    @CliCommand(value = "web mvc tiles", help = "Add apache tiles to your web mvc project")
+    public void addTiles() {
+    	this.operations.addTiles();
     }
 }

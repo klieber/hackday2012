@@ -8,20 +8,16 @@ package sf.hackday.roo.sample;
 public interface SampleOperations {
 
     /**
-     * Indicate of the install tags command should be available
+     * Indicate of the add tiles command should be available
      * 
      * @return true if it should be available, otherwise false
      */
-    boolean isInstallTagsCommandAvailable();
-
+    boolean isAddTilesCommandAvailable();
+    
+    void addTiles();
     /**
      * @param propertyName to obtain (required)
      * @return a message that will ultimately be displayed on the shell
      */
     String getProperty(String propertyName);
-    
-    /**
-     * Install tags used for MVC scaffolded apps into the target project.
-     */
-    void installTags();
 }
