@@ -6,6 +6,7 @@ $(document).ready(function(){
 	
 	$("#quoteError").hide();
 	$("#quoteEstimate").hide();
+	$("#buyNow").hide();
 	quote.loadMap();
 	
 });
@@ -33,6 +34,7 @@ var quote = {
 		        	$('#quoteError').fadeOut();
 		        	$('#quoteEstimate').html('<h3>Your Price Estimate is</h3><h2>$' + json + '</h2>');
 		        	$('#quoteEstimate').fadeIn();
+		        	$('#buyNow').fadeIn();
 		        },
 		        error: function(e){
 		        	$('#quoteError').fadeIn();

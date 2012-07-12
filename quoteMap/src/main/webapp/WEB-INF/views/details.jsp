@@ -31,12 +31,12 @@
 		<h3>We have found these details for the property you entered.</h3>
 		<h3>Please confirm and update any incorrect information and then submit.</h3>
 		<br>
-		<h2 id="street">${property.address.street}</h2>
-		<h2 id="cityStateZip">${property.address.city}, ${property.address.state} ${property.address.zipcode}</h2>
-		<br>
 		<div class="row">
 		<form class="form-horizontal span5">
 			<div class="span5">
+				<h2 id="street">${property.address.street}</h2>
+				<h2 id="cityStateZip">${property.address.city}, ${property.address.state} ${property.address.zipcode}</h2>
+				<br>
 				<fieldset>
 					<div class="control-group">
 						<label class="control-label" for="yearBuilt">Year Built</label>
@@ -89,17 +89,20 @@
 				</fieldset>
 			</div>
 			<div class="row">
-			<div class="span2 offset1">
+			<div class="offset1">
 		  		<button type="button" class="btn btn-large btn-primary" onclick="quote.getEstimate();">Get Estimate!</button>
+		  		<button id="buyNow" type="button" class="btn btn-large btn-primary">Buy Now!</button>
 		  	</div>
 		  	</div>
 		</form>
 		<div class="span6">
+			<br>
 			<div id="quoteEstimate" class="alert alert-info"></div>
 			<div id='myMap' style="position:relative; width:400px; height:400px;"></div>
 		</div>
 		</div>
 	</div>
+	<img alt="Zillow" src="http://www.zillow.com/vstatic/3efe31b610f8cb7313c4ae39a7009393/static/logos/Zillowlogo_150x40_rounded.gif">
 </div>
 </div>
 <!-- Placed at the end of the document so the pages load faster -->
