@@ -1,6 +1,0 @@
-// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-12 09:31:24
-addon create simple --topLevelPackage sf.hackday.roo.sample --description ""
-// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-12 09:31:25
-// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-12 09:59:16
-osgi start --url file:///home/klieber/sandbox/hackday2012/sample-roo-addon/target/sample-roo-addon-0.1.0.BUILD-SNAPSHOT.jar
-say hello --name Kyle
