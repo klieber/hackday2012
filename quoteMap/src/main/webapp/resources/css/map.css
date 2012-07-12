@@ -1,0 +1,7 @@
+.pinStyle1{ position:relative; background:url('../img/map_pin.png') no-repeat 0 0; height:30px; width:25px; top:-15px; color:#fff; text-align:center; font: bold 12px Arial; cursor: pointer;}
+
+.pinStyle1 .text{ position: relative; top: 2px; }
+
+#quoteEstimate{
+	width: 350px;
+}
