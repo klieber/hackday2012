@@ -1,4 +1,4 @@
-package sf.hackday.roo.sample;
+package sf.hackday.roo.tiles;
 
 import java.io.File;
 import java.io.IOException;

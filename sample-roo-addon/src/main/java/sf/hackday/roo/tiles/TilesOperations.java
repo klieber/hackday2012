@@ -1,4 +1,4 @@
-package sf.hackday.roo.sample;
+package sf.hackday.roo.tiles;
 
 /**
  * Interface of commands that are available via the Roo shell.
