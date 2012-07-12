@@ -5,7 +5,7 @@ package sf.hackday.roo.sample;
  *
  * @since 1.1.1
  */
-public interface SampleOperations {
+public interface TilesOperations {
 
     /**
      * Indicate of the add tiles command should be available

@@ -23,7 +23,7 @@ import org.springframework.roo.shell.converters.StaticFieldConverter;
  */
 @Component // Use these Apache Felix annotations to register your commands class in the Roo container
 @Service
-public class SampleCommands implements CommandMarker { // All command types must implement the CommandMarker interface
+public class TilesCommands implements CommandMarker { // All command types must implement the CommandMarker interface
     
     /**
      * Get hold of a JDK Logger
@@ -33,7 +33,7 @@ public class SampleCommands implements CommandMarker { // All command types must
     /**
      * Get a reference to the SampleOperations from the underlying OSGi container
      */
-    @Reference private SampleOperations operations; 
+    @Reference private TilesOperations operations; 
     
     /**
      * Get a reference to the StaticFieldConverter from the underlying OSGi container;

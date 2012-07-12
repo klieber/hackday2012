@@ -25,13 +25,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * Implementation of {@link SampleOperations} interface.
+ * Implementation of {@link TilesOperations} interface.
  *
  * @since 1.1.1
  */
 @Component
 @Service
-public class SampleOperationsImpl implements SampleOperations {
+public class TilesOperationsImpl implements TilesOperations {
 
 	private static final char SEPARATOR = File.separatorChar;
 
