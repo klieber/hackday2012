@@ -35,32 +35,6 @@ public class TilesCommands implements CommandMarker { // All command types must 
      */
     @Reference private TilesOperations operations; 
     
-    /**
-     * Get a reference to the StaticFieldConverter from the underlying OSGi container;
-     * this is useful for 'type save' command tab completions in the Roo shell
-     */
-    @Reference private StaticFieldConverter staticFieldConverter;
-
-    /**
-     * The activate method for this OSGi component, this will be called by the OSGi container upon bundle activation 
-     * (result of the 'addon install' command) 
-     * 
-     * @param context the component context can be used to get access to the OSGi container (ie find out if certain bundles are active)
-     */
-    protected void activate(ComponentContext context) {
-        staticFieldConverter.add(SamplePropertyName.class);
-    }
-
-    /**
-     * The deactivate method for this OSGi component, this will be called by the OSGi container upon bundle deactivation 
-     * (result of the 'addon remove' command) 
-     * 
-     * @param context the component context can be used to get access to the OSGi container (ie find out if certain bundles are active)
-     */
-    protected void deactivate(ComponentContext context) {
-        staticFieldConverter.remove(SamplePropertyName.class);
-    }
-    
     @CliAvailabilityIndicator("web mvc tiles")
     public boolean isAddTilesAvailable() {
     	return this.operations.isAddTilesCommandAvailable();
